@@ -16,6 +16,9 @@ VERSION = "3.1.1"
 
 IP_API = "https://api.ipify.org/?format=json"
 
+LATEST_RELEASE_API = "https://api.github.com/repos/ahnaf-hasan/torghost/releases/latest"
+
+
 
 
 
@@ -219,7 +222,7 @@ def check_update():
             bcolors.BOLD + "Would you like to download latest version and build from Git repo? [Y/n]" + bcolors.ENDC).lower()
         if choice in yes:
             os.system(
-                'cd /tmp && git clone  https://github.com/SusmithKrishnan/torghost')
+                'cd /tmp && git clone  https://github.com/ahnaf-hasan/torghost')
             os.system('cd /tmp/torghost && sudo ./build.sh')
         elif choice in no:
             print(t() + " Update aborted by user")
